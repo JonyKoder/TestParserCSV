@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ElizarovTest.Models.FileModel>
+@{
+    ViewData["Title"] = "Добавление файла";
+}
+<h3>Выберите файл для загрузки</h3>
+<form asp-action="AddFile"  asp-controller="Home" enctype="multipart/form-data">
+    <input type="file" name="uploadedFile" accept=".csv" /><br>
+    <input type="submit" value="Загрузить" />
+   
+
+        <select name="znak" >
+            <option>Точка</option>
+            <option>Запятая</option>
+            <option>Табуляция</option>
+        </select>
+
+
+</form>
+@await Html.PartialAsync("AddFile")
+  
+</div>
